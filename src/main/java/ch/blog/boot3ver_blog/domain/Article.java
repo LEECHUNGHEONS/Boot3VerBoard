@@ -1,10 +1,7 @@
 package ch.blog.boot3ver_blog.domain;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Setter
@@ -23,6 +20,12 @@ public class Article {
     @Column(name = "content", nullable = false)
     private String content;
 
+
+    @Builder
+    public Article(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 
 
 }
