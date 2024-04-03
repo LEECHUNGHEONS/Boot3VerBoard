@@ -9,4 +9,6 @@ import lombok.NoArgsConstructor;
 @Getter
 public class AddArticleRequest {
 
+    private String title;
+
 }
